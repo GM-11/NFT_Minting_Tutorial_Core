@@ -372,7 +372,7 @@ Now let's call this function when the user clicks the mint button.
 <button onClick={mintNFT}>Mint this NFT</button>
 ```
 
-When we click the `Mint this NFT` button, our wallet should prompt us to sign the transaction
+When we click the `**Mint this NFT** button, our wallet should prompt us to sign the transaction
 
 ![img](./assets/pic9.png)
 
@@ -386,7 +386,7 @@ But wait, why can't we see it?🤔
 
 Well since this NFT is on the testnet, metamask automatically does not detect them. We need to import our NFT into our wallet.
 
-Cick on `Import NFT` at the bottom. Add your contract address in the `Address` section and 0 in the `Token ID` section and click on `Import`.
+Cick on `Import NFT` at the bottom. Add your contract address in the **Address** input field and 0 in the **Token Id** input field and click on **Import**.
 
 ![img](./assets/pic11.png)
 
