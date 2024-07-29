@@ -17,8 +17,12 @@ Welcome to this tutorial where we will build a simple NFT Minting DApp on Core B
 - [Yarn](https://yarnpkg.com/) v1.22.21
 - [Hardhat](https://hardhat.org/) v2.20.1
 - [Metamask Wallet](https://metamask.io/download/)
-- Core Testnet Configuration: Configure Metamask to connect to the Core Tesnet. Refer [here](https://docs.coredao.org/docs/Dev-Guide/core-testnet-wallet-config#adding-core-testnet-to-metamask) for more details.
-- Core Faucet: To get some testnet CORE tokens for transactions, visit the [Core Faucet](https://scan.test.btcs.network/faucet)
+- **Core Testnet Configuration**: Configure MetaMask to connect to the Core Testnet. Refer here for more details.
+  - **Network Name**: Core Testnet
+  - **New RPC URL**: [https://rpc.test.btcs.network](https://rpc.test.btcs.network)
+  - **Chain ID**: 1115
+  - **Currency Symbol**: CORE
+- **Core Faucet**: To get test CORE tokens for transactions, visit the Core Faucet, refer [here](https://docs.coredao.org/docs/Dev-Guide/core-faucet) for more details.
 
 ## Setting up Dev Environment
 
@@ -157,13 +161,13 @@ contract Nft is ERC721, ERC721URIStorage, Ownable {
 }
 ```
 
-Let us understand in detail what is happening in this code.
+In this code, we
 
-- Firstly, we are importing the `ERC721`, `ERC721URIStorage`, and `Ownable` classes from the openzeppelin/contracts library. These classes allow our smart contract to be a Token Smart Contracts (a Non Fundgible in this case).
-- We then initialize a private state variable called `_nextTokenId`. This variable will be the ID of our NFT.
-- The constructor initializes the ERC721 contract with name "MyNFT" and symbol "MYN". You can keep this name and symbol according to your choice. We also initialize the `Ownable` contract with the address of the owner. The `Ownable` contract is used to restrict the minting of NFTs to the owner of the contract.
-- The `safeMint` function is used to mint a new NFT. It takes two arguments, the address of the user to whom the NFT will be minted and the URI of the NFT.
-- The `tokenURI` function and `supportsInterface` function are overrides required by Solidity. This is becuase our NFT contract inherits from the `ERC721` and `ERC721URIStorage` contracts.
+- Import the `ERC721`, `ERC721URIStorage`, and `Ownable` classes from the openzeppelin/contracts library for creating a new NFT smart contract.
+- Initialize a private state variable `_nextTokenId` to store the ID of the NFT.
+- The constructor initializes the ERC721 contract with a name and symbol, and sets up the `Ownable` contract with the owner's address to restrict NFT minting to the owner.
+- The `safeMint` function mints a new NFT, taking the recipient's address and the NFT's URI as arguments.
+- The `tokenURI` and `supportsInterface` functions override required methods from `ERC721` and `ERC721URIStorage`.
 
 In the `safeMint` function, we
 
@@ -173,7 +177,7 @@ In the `safeMint` function, we
 
 ## Compiling and Deploying the Smart Contract
 
-Woohoo, we have successfully written our smart contract. Now let's compile and deploy it to the Core Testnet. Run the following command to compile the smart contract:
+Great, Now run the following command to complie the contract
 
 ```bash
 yarn hardhat compile
@@ -302,7 +306,9 @@ export default App;
 Now run `yarn dev` command in the frontend directory, open the app in your browser on `http://localhost:5173`. You should see your metamaks wallet prompt you to connect to the website.
 
 ![img](./assets/pic5.png)
+
 Make sure to connect that account only which you have used to deploy the contract. Since we have used the `Ownable` class in our contract, we will face errors if we try to mint the NFT in other accounts. By clicking `Next` and `Confirm`, our wallet will be connected to the website and we will see our address on the screen.
+
 ![img](./assets/pic6.png)
 
 Wonderful! Now we will write code to show the nft image and mint it in our wallet.
@@ -373,15 +379,18 @@ When we click the `Mint this NFT` button, our wallet should prompt us to sign th
 Click on **Confirm** to confirm the transaction.
 
 Awsome! We have minted our first NFT on the Core Blockchain!🥳
-But why can't we see it?🤔
+
+But wait, why can't we see it?🤔
 
 ![img](./assets/pic10.png)
 
 Well since this NFT is on the testnet, metamask automatically does not detect them. We need to import our NFT into our wallet.
-Cick on `Import NFT` at the bottom.
-Add your contract address in the `Address` section and 0 in the `Token ID` section and click on `Import`.
-Wonderful, now we can see our nft in the wallet!
+
+Cick on `Import NFT` at the bottom. Add your contract address in the `Address` section and 0 in the `Token ID` section and click on `Import`.
+
 ![img](./assets/pic11.png)
+
+Wonderful, now we can see our nft in the wallet!
 
 ## Conclusion
 
