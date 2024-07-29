@@ -227,7 +227,7 @@ Make sure to save this address as we will need it later to interact with the sma
 
 ## Building the Frontend
 
-Awsome! We have deployed our smart contract to the Core Testnet. Now let's build the frontend of our DApp. We will use `Vite` and `React` to build our frontend. Go to the root directory of your project and run the following command:
+Awsome! We have deployed our smart contract to the Core Testnet. Now let's build the frontend of our DApp. We will use **Vite** and **React** to build our frontend. Go to the root directory of your project and run the following command:
 
 ```bash
 yarn create vite frontend
@@ -235,9 +235,9 @@ yarn create vite frontend
 
 ![img](./assets/pic4.png)
 
-Select React from the `Select a framework` option and Javascript from `Select a variant` option.
+Select **React** from the `Select a framework` option and **Javascript** from `Select a variant` option.
 
-Now we will use the `Ethers.js` library to interact with our smart contracts. Install it in the frontend directory.
+Now we will use the **Ethers.js** library to interact with our smart contracts. Install it in the frontend directory.
 
 ```bash
 yarn add ethers
