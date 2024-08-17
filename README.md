@@ -315,10 +315,10 @@ Wonderful! Now we will write code to show the nft image and mint it in our walle
 We will also add code to show our NFT image and button to mint in our wallet
 
 ```javascript
-const nftImage =
-  "https://raw.githubusercontent.com/GM-11/NFT_Minting_Tutorial/master/assets/nft.png";
-const nftUri =
-  "https://raw.githubusercontent.com/GM-11/NFT_Minting_Tutorial/master/assets/metadata.json";
+const nftImage = "https://raw.githubusercontent.com/GM-11/NFT_Minting_Tutorial_Core/main/assets/nft.png"
+
+const nftUri = "https://raw.githubusercontent.com/GM-11/NFT_Minting_Tutorial_Core/main/assets/nft.png"
+
 ```
 
 For this tutorial, you can copy these links as it is.
