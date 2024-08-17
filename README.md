@@ -317,7 +317,7 @@ We will also add code to show our NFT image and button to mint in our wallet
 ```javascript
 const nftImage = "https://raw.githubusercontent.com/GM-11/NFT_Minting_Tutorial_Core/main/assets/nft.png"
 
-const nftUri = "https://raw.githubusercontent.com/GM-11/NFT_Minting_Tutorial_Core/main/assets/nft.png"
+const nftUri = "https://raw.githubusercontent.com/GM-11/NFT_Minting_Tutorial_Core/main/assets/metadata.json"
 
 ```
 
